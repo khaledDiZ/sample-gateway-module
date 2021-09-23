@@ -11,7 +11,7 @@
  * Within the module itself, all functions must be prefixed with the module
  * filename, followed by an underscore, and then the function name. For this
  * example file, the filename is "gatewaymodule" and therefore all functions
- * begin "gatewaymodule_".
+ * begin "zaincash_".
  *
  * If your module or third party API does not support a given function, you
  * should not define that function within your module. Only the _config
@@ -39,7 +39,7 @@ if (!defined("WHMCS")) {
  *
  * @return array
  */
-function gatewaymodule_MetaData()
+function zaincash_MetaData()
 {
     return array(
         'DisplayName' => 'Sample Payment Gateway Module',
@@ -69,7 +69,7 @@ function gatewaymodule_MetaData()
  *
  * @return array
  */
-function gatewaymodule_config()
+function zaincash_config()
 {
     return array(
         // the friendly display name for a payment gateway should be
@@ -143,7 +143,7 @@ function gatewaymodule_config()
  *
  * @return string
  */
-function gatewaymodule_link($params)
+function zaincash_link($params)
 {
     // Gateway Configuration Parameters
     $accountId = $params['accountID'];
@@ -222,7 +222,7 @@ function gatewaymodule_link($params)
  *
  * @return array Transaction response status
  */
-function gatewaymodule_refund($params)
+function zaincash_refund($params)
 {
     // Gateway Configuration Parameters
     $accountId = $params['accountID'];
@@ -284,7 +284,7 @@ function gatewaymodule_refund($params)
  *
  * @return array Transaction response status
  */
-function gatewaymodule_cancelSubscription($params)
+function zaincash_cancelSubscription($params)
 {
     // Gateway Configuration Parameters
     $accountId = $params['accountID'];
